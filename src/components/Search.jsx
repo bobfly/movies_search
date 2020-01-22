@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import MoviesContext from "../context/MoviesContext";
 
-const Search = props => {
+const Search = () => {
   const [searchValue, setSearchValue] = useState("");
+  const moviesContext = useContext(MoviesContext);
 
   const handleSearchInputChanges = e => {
     setSearchValue(e.target.value);
@@ -13,7 +15,7 @@ const Search = props => {
 
   const callSearchFunction = e => {
     e.preventDefault();
-    props.search(searchValue);
+    moviesContext.loadMovies(searchValue);
     resetInputField();
   };
 

@@ -1,0 +1,2 @@
+export const SEARCH_MOVIES = "SEARCH_MOVIES";
+export const SET_ERROR_MESSAGE = "SET_ERROR_MESSAGE";

@@ -10,4 +10,10 @@ const fetchData = term => {
   return axios.get(url);
 };
 
-export { fetchData };
+const getMovieById = movieId => {
+  const url = `${MOVIE_URL}?i=${movieId}&${KEY}`;
+
+  return axios.get(url);
+};
+
+export { fetchData, getMovieById };
